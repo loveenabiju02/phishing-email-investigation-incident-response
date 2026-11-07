@@ -1,0 +1,21 @@
+EMAIL HEADER ANALYSIS
+INCIDENT: GH-2026-001
+
+1. Received: suspicious-relay.attacker.example
+2. From domain: support-microsoft365.example
+3. Reply-To domain: attacker.example
+4. Return-Path domain: attacker.example
+5. Message-ID domain: attacker.example
+
+ANALYST OBSERVATIONS:
+- Sender identity and reply destination do not match.
+- Return-Path uses a separate domain.
+- Message-ID references the suspicious domain.
+- Routing information claims an origin from a suspicious relay.
+
+ASSESSMENT:
+Multiple header inconsistencies support the phishing
+suspicion. Original mail-server logs would be needed
+to independently validate the route.
+
+NOTE: Synthetic training evidence.

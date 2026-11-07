@@ -1,0 +1,102 @@
+INCIDENT INVESTIGATION
+Incident ID: GH-2026-001
+Organisation: Gulf Horizon Travel LLC
+
+1. INVESTIGATION OBJECTIVE
+
+To examine the potential impact of a simulated phishing
+email targeting an employee's Microsoft 365 account.
+
+The investigation focuses on:
+- Whether the employee interacted with the email.
+- Whether the suspicious link was accessed.
+- Whether credentials may have been exposed.
+- What evidence an SOC analyst would need to confirm
+  or rule out account compromise.
+
+NOTE:
+This is a fictional cybersecurity training scenario.
+No real employee, account or credentials are involved.
+
+
+2. SIMULATED EMPLOYEE INTERACTION
+
+Scenario:
+An employee at Gulf Horizon Travel LLC receives
+the suspicious Microsoft 365 verification email.
+
+Simulated events:
+
+09:12 - Phishing email received.
+09:15 - Employee opens the email.
+09:16 - Employee clicks the suspicious verification link.
+09:17 - A fake Microsoft 365 login page is displayed.
+09:18 - Employee enters fictional test credentials.
+09:19 - The credentials are assumed exposed within
+        this simulation.
+
+Investigation status:
+Simulated credential exposure.
+
+Important:
+These events are constructed for training purposes.
+No actual link was visited and no credentials were
+collected or transmitted.
+
+3. EVIDENCE REQUIRED FOR VALIDATION
+
+To investigate the simulated incident, an SOC analyst
+would seek the following evidence:
+
+1. Email Gateway Logs
+   Purpose: Confirm email delivery and message details.
+
+2. Web Proxy / DNS Logs
+   Purpose: Determine whether the suspicious domain
+   was accessed by the employee's device.
+
+3. Endpoint Logs
+   Purpose: Identify browser activity and related
+   suspicious processes.
+
+4. Microsoft 365 Sign-in Logs
+   Purpose: Identify unusual login attempts,
+   unfamiliar locations or suspicious sessions.
+
+5. Authentication Logs
+   Purpose: Identify failed or successful logins
+   following potential credential exposure.
+
+CURRENT FINDING:
+Credential exposure is assumed within the simulation.
+No actual endpoint, proxy or Microsoft 365 logs have
+been collected to validate these events.
+
+4. IMMEDIATE INCIDENT RESPONSE
+
+If credential exposure were confirmed, the SOC team
+would take the following actions:
+
+1. Account Security
+   - Reset the affected user's password.
+   - Revoke active Microsoft 365 sessions.
+   - Enforce multi-factor authentication.
+
+2. Threat Containment
+   - Block the confirmed malicious URL and domain.
+   - Search email logs for other recipients.
+   - Remove the phishing email from affected inboxes.
+
+3. Investigation
+   - Review sign-in and authentication logs.
+   - Check for suspicious account activity.
+   - Preserve relevant security evidence.
+
+4. Recovery
+   - Restore secure account access.
+   - Monitor the account for further suspicious activity.
+   - Document lessons learned.
+
+NOTE:
+These are proposed response actions, not actions
+performed on a real account or network.

@@ -1,0 +1,21 @@
+{
+    "incident_id": "GH-2026-001",
+    "analysis_type": "Automated phishing email analysis",
+    "email_details": {
+        "sender": "Microsoft 365 Support <security@support-microsoft365.example>",
+        "recipient": "employee@gulfhorizon.example",
+        "reply_to": "verify-account@attacker.example",
+        "return_path": "<bounce@attacker.example>",
+        "subject": "URGENT: Account Verification Required",
+        "date": "Fri, 06 Nov 2026 09:12:00 +0000",
+        "message_id": "<GH-2026-001@attacker.example>",
+        "authentication_results": "mail.gulfhorizon.example; spf=fail; dkim=none; dmarc=fail"
+    },
+    "extracted_urls": [
+        "https://login-microsoft365-secure.example/verify"
+    ],
+    "url_domains": [
+        "login-microsoft365-secure.example"
+    ],
+    "analyst_note": "Automated extraction only. Indicators belong to a synthetic training scenario and have not been independently verified as malicious."
+}

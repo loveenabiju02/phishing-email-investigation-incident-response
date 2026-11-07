@@ -1,0 +1,17 @@
+HTML BODY ANALYSIS
+INCIDENT: GH-2026-001
+
+1. HTML-formatted email (text/html).
+2. Microsoft 365 branding used for impersonation.
+3. Urgent account verification requested.
+4. Threat of account suspension within 24 hours.
+5. Clickable text: Verify Your Account.
+6. Actual hyperlink destination:
+   https://login-microsoft365-secure.example/verify
+
+SOC ASSESSMENT:
+The email uses brand impersonation, urgency and
+fear-based social engineering to encourage the
+recipient to visit a suspicious login page.
+
+NOTE: Synthetic training evidence. URL not visited.

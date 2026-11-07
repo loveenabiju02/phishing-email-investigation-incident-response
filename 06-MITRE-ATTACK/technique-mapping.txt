@@ -1,0 +1,20 @@
+MITRE ATT&CK MAPPING
+Incident: GH-2026-001
+
+1. SPEARPHISHING LINK
+Technique ID: T1566.002
+Evidence: Email contains a suspicious hyperlink
+impersonating a Microsoft 365 verification page.
+Status: Observed in simulated email.
+
+2. USER EXECUTION: MALICIOUS LINK
+Technique ID: T1204.001
+Evidence: Recipient could potentially be tricked
+into clicking the suspicious verification link.
+Status: Potential; user interaction not confirmed.
+
+ANALYST NOTE:
+Credential theft, account compromise and session
+hijacking have not been confirmed.
+
+Framework: MITRE ATT&CK Enterprise.

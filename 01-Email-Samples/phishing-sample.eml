@@ -1,0 +1,24 @@
+﻿Received: from suspicious-relay.attacker.example (192.0.2.44)
+ by mail.gulfhorizon.example with ESMTP id GH-2026-001
+Date: Fri, 06 Nov 2026 09:12:00 +0000
+From: Microsoft 365 Support <security@support-microsoft365.example>
+To: employee@gulfhorizon.example
+Reply-To: verify-account@attacker.example
+Return-Path: <bounce@attacker.example>
+Subject: URGENT: Account Verification Required
+Message-ID: <GH-2026-001@attacker.example>
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Authentication-Results: mail.gulfhorizon.example; spf=fail; dkim=none; dmarc=fail
+Received-SPF: fail (sender IP is 192.0.2.44)
+
+<html>
+<body>
+<h2>Microsoft 365 Security Notification</h2>
+<p>Dear Employee,</p>
+<p>Your company email account requires immediate verification.</p>
+<p>Failure to verify your account within 24 hours may result in account suspension.</p>
+<p><a href="https://login-microsoft365-secure.example/verify">Verify Your Account</a></p>
+<p>Regards,<br>Microsoft 365 Security Team</p>
+</body>
+</html>

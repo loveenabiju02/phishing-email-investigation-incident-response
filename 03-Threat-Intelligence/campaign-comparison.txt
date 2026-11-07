@@ -1,0 +1,34 @@
+CAMPAIGN COMPARISON
+Incident: GH-2026-001
+Reference: CPX Microsoft 365 QR-code phishing research
+Publication date: 09 March 2026
+
+CPX CAMPAIGN:
+- QR codes embedded in email attachments.
+- Fake Microsoft 365 authentication portals.
+- Credential and session-token harvesting.
+- Adversary-in-the-Middle techniques.
+- Phishing-as-a-Service infrastructure.
+
+GULF HORIZON SIMULATION:
+- Microsoft 365 brand impersonation.
+- Hyperlinked verification request.
+- Urgent account suspension warning.
+- Suspicious login URL.
+- Potential credential exposure.
+
+COMMON CHARACTERISTICS:
+- Microsoft 365 impersonation.
+- Credential-harvesting objective.
+- Social engineering.
+
+IMPORTANT DIFFERENCES:
+- CPX campaign uses QR-code delivery.
+- Gulf Horizon sample uses a direct hyperlink.
+- AiTM activity has not been established in GH-2026-001.
+
+ASSESSMENT:
+The CPX campaign provides relevant threat context,
+but there is insufficient evidence to attribute the
+Gulf Horizon simulation to this campaign.
+

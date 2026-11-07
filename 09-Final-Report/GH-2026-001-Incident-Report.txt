@@ -1,0 +1,248 @@
+# PHISHING EMAIL INVESTIGATION AND INCIDENT RESPONSE
+## Final Incident Investigation Report
+
+**Incident ID:** GH-2026-001  
+**Organisation:** Gulf Horizon Travel LLC (Fictional)  
+**Incident Date:** 6 November 2026  
+**Report Type:** Cybersecurity Incident Investigation  
+**Prepared by:** Security Analyst (Portfolio Simulation)  
+**Incident Classification:** Phishing / Suspected Credential Exposure  
+**Severity:** High (Scenario Classification)  
+**Status:** Investigation documented – simulated incident
+
+---
+
+## 1. Executive Summary
+
+This project documents an end-to-end investigation of a simulated phishing incident targeting an employee of Gulf Horizon Travel LLC. The email impersonated Microsoft 365 Support and used urgent account-verification language to encourage the recipient to visit a fraudulent login page.
+
+The investigation involved preservation of the email sample, examination of email headers and HTML content, extraction of indicators of compromise (IOCs), external threat-intelligence research, MITRE ATT&CK mapping and Python-based analysis automation.
+
+Simulated web activity was ingested into Splunk Cloud to demonstrate security monitoring and detection. Search queries identified suspicious URL access and a simulated credential-submission event. A Splunk dashboard and scheduled alert were also configured.
+
+The scenario assumes that fictional test credentials were submitted. No real credentials were collected, no malicious URL was visited and no actual organisation or employee account was compromised.
+
+## 2. Investigation Objectives
+
+The investigation aimed to:
+
+- Identify phishing characteristics and potential indicators of compromise.
+- Examine email headers and message content.
+- Assess the potential risk of credential exposure.
+- Research relevant phishing campaigns and techniques.
+- Map observed and potential attacker behaviour to MITRE ATT&CK.
+- Automate email analysis and IOC extraction using Python.
+- Demonstrate SIEM-based detection and monitoring using Splunk.
+- Develop appropriate incident containment, eradication and recovery recommendations.
+
+## 3. Incident Scenario
+
+An employee received an email claiming to be from Microsoft 365 Support. The message requested immediate account verification and threatened account suspension within 24 hours.
+
+The email contained a suspicious verification link and used Microsoft branding to appear legitimate.
+
+The simulated employee interaction was:
+
+- 09:12 – Email received.
+- 09:15 – Email opened.
+- 09:16 – Suspicious URL accessed.
+- 09:17 – Fake login page displayed.
+- 09:18 – Fictional test credentials assumed submitted.
+- 09:19 – Incident flagged for investigation.
+
+These events are fictional training data.
+
+## 4. Email Forensic Investigation
+
+The original `.eml` sample was preserved in the project directory and examined using PowerShell and Notepad.
+
+### 4.1 Key Email Findings
+
+- **Sender:** security@support-microsoft365.example
+- **Reply-To:** verify-account@attacker.example
+- **Return-Path:** bounce@attacker.example
+- **Subject:** URGENT: Account Verification Required
+- **Message-ID:** GH-2026-001@attacker.example
+- **Authentication results:** SPF fail, DKIM none, DMARC fail (simulated).
+- **Content type:** HTML.
+
+### 4.2 Suspicious Characteristics
+
+The investigation identified several phishing indicators:
+
+1. Sender identity impersonated Microsoft 365 Support.
+2. Reply-To and Return-Path used different domains from the apparent sender.
+3. Email authentication results indicated failures in the simulated sample.
+4. Urgent wording pressured the recipient to act quickly.
+5. The message threatened account suspension.
+6. The verification hyperlink used a suspicious, unrelated domain.
+
+The combination of these characteristics strongly indicates a phishing attempt within the scenario.
+
+## 5. File Integrity and Evidence Preservation
+
+The original email sample was hashed using the SHA-256 algorithm.
+
+**SHA-256:**
+
+`D0A38DF217BC9CBD7642A52F35A8E610E4103B4F1908126215AD1F6EFCB23990`
+
+The hash was recorded in `file-integrity.txt` to provide a reference for checking whether the preserved sample has changed.
+
+## 6. Indicator of Compromise Extraction
+
+The following synthetic indicators were extracted:
+
+| Indicator Type | Value |
+|---|---|
+| Sender domain | support-microsoft365.example |
+| Sender IP | 192.0.2.44 |
+| Suspicious URL | https://login-microsoft365-secure.example/verify |
+| URL domain | login-microsoft365-secure.example |
+
+The indicators use reserved or example domains and addresses for safe simulation. They are not verified real-world malicious infrastructure.
+
+## 7. Threat Intelligence Research
+
+External research was conducted into publicly reported Microsoft 365 phishing campaigns, including campaigns involving fraudulent authentication portals and credential harvesting.
+
+VirusTotal and URLScan were used to examine an unrelated domain reported in external research. The recorded VirusTotal result was 10 detections out of 92 vendors. URLScan showed no malicious verdicts for the hostname or URL in the lookup performed.
+
+These results are contextual intelligence only. A lack of URLScan verdicts does not establish that a domain is safe, and the external campaign has not been attributed to the fictional Gulf Horizon incident.
+
+The comparison identified similarities in Microsoft 365 impersonation and credential-harvesting objectives, while the reported external campaign used QR-code-based delivery rather than the direct hyperlink in this scenario.
+
+## 8. MITRE ATT&CK Mapping
+
+| Technique | ID | Relevance |
+|---|---|---|
+| Spearphishing Link | T1566.002 | Suspicious link delivered through the simulated email |
+| Malicious Link | T1204.001 | Potential user interaction with the link; represented in the simulated activity |
+
+The mapping describes the scenario. Credential theft, account compromise and session hijacking were not independently verified.
+
+## 9. Python Automation
+
+A Python script was developed to automate analysis of the `.eml` file.
+
+### Capabilities
+
+- Parses email headers.
+- Extracts sender, recipient and subject details.
+- Identifies Reply-To and Return-Path values.
+- Extracts URLs from the email.
+- Identifies URL domains.
+- Exports the analysis into JSON format.
+
+The script uses Python standard libraries, including `email`, `re`, `json`, `pathlib` and `urllib.parse`.
+
+**Output:** `automated-analysis.json`
+
+The script successfully processed the sample, identified the correct subject and extracted one URL.
+
+## 10. Splunk SIEM Detection and Monitoring
+
+Simulated web activity was uploaded into Splunk Cloud for security monitoring and detection.
+
+### 10.1 Detection Results
+
+The ingested dataset contained six simulated events:
+
+- Email received.
+- Email opened.
+- Suspicious URL accessed.
+- Fake login page displayed.
+- Credential submission simulated.
+- Incident flagged.
+
+Detection searches successfully identified:
+
+- One suspicious URL access event.
+- One simulated credential-submission event.
+- Six total incident events.
+
+### 10.2 Dashboard
+
+A Splunk dashboard titled **GH-2026-001 – Phishing Incident Monitoring** was created.
+
+The dashboard contains:
+
+1. Total phishing incident events.
+2. Suspicious URL accesses.
+3. Credential exposure events.
+4. Phishing incident event distribution.
+5. Phishing incident timeline.
+
+### 10.3 Alert Configuration
+
+A scheduled Splunk alert titled **GH-2026-001 – Suspicious Phishing Activity** was configured.
+
+- Trigger condition: Number of results greater than zero.
+- Action: Add to Triggered Alerts.
+- Schedule: Weekly, Monday at 06:00.
+- Status: Enabled.
+
+The alert was saved successfully. No fired events were displayed at the time the alert details were reviewed.
+
+Because the dataset is static, this configuration demonstrates alert creation and detection logic rather than verified continuous monitoring or a confirmed alert notification.
+
+## 11. Incident Response Recommendations
+
+### 11.1 Containment
+
+- Secure or temporarily restrict the potentially affected account.
+- Reset the password.
+- Revoke active sessions and refresh tokens.
+- Verify multi-factor authentication.
+- Block confirmed malicious indicators through appropriate security controls.
+- Identify other recipients of the phishing email.
+
+### 11.2 Eradication
+
+- Remove the phishing email from affected mailboxes.
+- Check for suspicious inbox rules and forwarding configurations.
+- Investigate endpoints for suspicious downloads or execution.
+- Review account activity and remove confirmed malicious artefacts.
+
+### 11.3 Recovery
+
+- Restore normal account access after security checks.
+- Verify legitimate sign-ins.
+- Monitor authentication activity.
+- Confirm that affected users can access services securely.
+
+### 11.4 Lessons Learned
+
+- Employees should verify unexpected account-security requests through official channels.
+- Email authentication controls should be monitored.
+- MFA and session revocation are important account-protection measures.
+- Phishing awareness training should cover suspicious links and credential-harvesting pages.
+- SIEM monitoring can support the identification of suspicious activity.
+
+These actions are recommendations for the fictional scenario, not actions performed on a live environment.
+
+## 12. Project Limitations
+
+This project was conducted as a controlled portfolio simulation.
+
+- The phishing email and internal activity records are synthetic.
+- The sender IP and domains are documentation-only indicators.
+- No real credentials were collected or transmitted.
+- No actual Microsoft 365 tenant, employee mailbox or corporate endpoint was investigated.
+- External threat-intelligence findings do not establish attribution.
+- Splunk analysis used an uploaded static CSV dataset rather than a live production telemetry feed.
+- The alert configuration was saved, but live alert delivery was not demonstrated.
+
+These limitations are important when interpreting the investigation results.
+
+## 13. Conclusion
+
+This project demonstrates a structured approach to investigating a suspected phishing incident, from email acquisition and forensic examination to IOC extraction, threat-intelligence research, automated analysis, SIEM detection and incident response planning.
+
+The work provides practical exposure to tools and techniques relevant to entry-level SOC operations, including PowerShell, Python, Splunk Cloud, email forensics and MITRE ATT&CK.
+
+It also highlights the importance of evidence preservation, careful interpretation of threat-intelligence results and clear documentation of investigative limitations.
+
+---
+
+**End of Report**

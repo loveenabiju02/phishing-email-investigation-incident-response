@@ -1,0 +1,7 @@
+timestamp,incident_id,employee,source_ip,destination_domain,event_type,result,notes
+2026-11-06 09:12:00,GH-2026-001,employee01,10.10.20.15,mail.gulfhorizon.example,email_received,success,Simulated phishing email received
+2026-11-06 09:15:00,GH-2026-001,employee01,10.10.20.15,mail.gulfhorizon.example,email_opened,success,Employee opened the email
+2026-11-06 09:16:00,GH-2026-001,employee01,10.10.20.15,login-microsoft365-secure.example,url_accessed,success,Simulated suspicious link access
+2026-11-06 09:17:00,GH-2026-001,employee01,10.10.20.15,login-microsoft365-secure.example,fake_login_displayed,success,Fictional login page displayed
+2026-11-06 09:18:00,GH-2026-001,employee01,10.10.20.15,login-microsoft365-secure.example,credential_submission,simulated,Fictional credentials assumed exposed
+2026-11-06 09:19:00,GH-2026-001,employee01,10.10.20.15,mail.gulfhorizon.example,incident_flagged,success,Simulated incident flagged for investigation

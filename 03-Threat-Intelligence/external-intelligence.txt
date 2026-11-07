@@ -1,0 +1,45 @@
+EXTERNAL THREAT INTELLIGENCE REFERENCE
+Source: VirusTotal
+Indicator: onedrivesalaryassessment.digitaltrustbase.de
+Detection ratio: 10/92
+Detection percentage: 10.9%
+
+Assessment:
+10 of 92 security vendors flagged the domain.
+This supports further investigation but is not
+conclusive proof of malicious activity.
+
+Context:
+Domain reported in CPX research on a Microsoft 365
+QR-code phishing campaign, March 2026.
+
+NOTE:
+External threat intelligence reference only.
+Not an IOC extracted from the fictional Gulf Horizon email.
+
+URLSCAN INTELLIGENCE FINDINGS
+
+Indicator: onedrivesalaryassessment.digitaltrustbase.de
+
+Hostname age:
+First seen: 8 months ago
+Last seen: Approximately 1 month ago
+
+Hostname scan status: Never scanned
+Hostname malicious verdicts: None
+
+URL scan status: Never scanned
+URL malicious verdicts: None
+
+Canonical URL:
+onedrivesalaryassessment.digitaltrustbase.de
+
+Assessment:
+URLScan returned no existing scan records or
+malicious verdicts for this hostname or URL.
+This does not establish that the domain is safe.
+
+Cross-platform observation:
+VirusTotal reported 10/92 detections, while
+URLScan showed no malicious verdicts.
+

@@ -1,0 +1,29 @@
+# Incident Timeline
+## Incident ID: GH-2026-001
+## Organisation: Gulf Horizon Travel LLC
+## Date: 6 November 2026
+
+| Time (UTC) | Event | Investigation Notes |
+|---|---|---|
+| 09:12 | Phishing email received | Email impersonating Microsoft 365 Support |
+| 09:15 | Email opened | Employee viewed the suspicious message |
+| 09:16 | Suspicious URL accessed | Simulated access to fraudulent login page |
+| 09:17 | Fake login page displayed | Credential-harvesting page simulated |
+| 09:18 | Credential submission | Fictional test credentials assumed exposed |
+| 09:19 | Incident flagged | Incident GH-2026-001 identified for investigation |
+
+## Investigation Milestones
+
+1. Preserved the synthetic email sample.
+2. Calculated and recorded its SHA-256 hash.
+3. Examined email headers and message content.
+4. Extracted and documented indicators of compromise.
+5. Conducted external threat-intelligence research for context.
+6. Mapped relevant behaviour to MITRE ATT&CK.
+7. Developed a Python email-analysis script.
+8. Ingested simulated web activity into Splunk.
+9. Created detection searches, a monitoring dashboard and an alert.
+
+## Analyst Note
+
+The employee interaction timestamps are fictional scenario data. The investigation milestones represent the portfolio work performed. The timeline does not establish that a real employee or account was compromised.

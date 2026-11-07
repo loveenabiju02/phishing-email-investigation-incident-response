@@ -1,0 +1,59 @@
+# Incident Response Plan
+## Incident ID: GH-2026-001
+## Organisation: Gulf Horizon Travel LLC
+
+### 1. Incident Overview
+A simulated phishing email impersonating Microsoft 365 Support was delivered to an employee. The email used urgent account-verification language and directed the employee to a fraudulent login page.
+
+The investigation simulation assumes that the employee accessed the link and submitted fictional test credentials. No real credentials were collected or transmitted.
+
+### 2. Incident Classification
+- Incident type: Phishing / Credential Exposure
+- Severity: High
+- Affected asset: Employee Microsoft 365 account (simulated)
+- Status: Simulated incident under investigation
+- Detection method: Email analysis and Splunk SIEM detection
+
+### 3. Containment
+Recommended immediate actions:
+1. Temporarily restrict or secure the potentially affected account.
+2. Reset the employee's password.
+3. Revoke active sessions and refresh tokens.
+4. Enforce or verify multi-factor authentication.
+5. Block the confirmed malicious URL and associated domain through appropriate security controls.
+6. Search email logs for other recipients of the same message.
+
+### 4. Eradication
+1. Remove the phishing email from affected mailboxes.
+2. Identify and remove any related malicious inbox rules or forwarding rules.
+3. Check endpoints for suspicious downloads or execution.
+4. Review account activity for unauthorised changes.
+5. Remove any confirmed malicious artefacts.
+
+### 5. Recovery
+1. Restore normal account access after securing the account.
+2. Verify legitimate sign-ins and account configuration.
+3. Monitor authentication activity for suspicious behaviour.
+4. Confirm that affected users can access services securely.
+5. Retain relevant evidence for future investigation.
+
+### 6. Lessons Learned
+- Employees should verify unexpected account-security requests through official channels.
+- Urgent messages threatening account suspension should be treated cautiously.
+- Email authentication controls such as SPF, DKIM and DMARC should be monitored.
+- Multi-factor authentication and session revocation are important account-protection measures.
+- Security awareness training should include phishing links and credential-harvesting scenarios.
+- SIEM monitoring can help identify suspicious access and credential-submission activity.
+
+### 7. Evidence and Limitations
+Evidence includes the synthetic phishing email, SHA-256 file hash, extracted indicators, forensic notes, Python analysis output, simulated web activity CSV, Splunk searches, dashboard and alert configuration.
+
+This is a controlled portfolio simulation. No real employee account, endpoint, email gateway or Microsoft 365 tenant was compromised or investigated. Containment, eradication and recovery actions are recommendations, not actions performed on a live environment.
+
+### 8. Incident Closure Criteria
+The simulated incident may be considered resolved when:
+- The affected account is secured.
+- Suspicious access has been reviewed.
+- Malicious email indicators have been blocked where verified.
+- Evidence is preserved.
+- Lessons learned and recommendations are documented.

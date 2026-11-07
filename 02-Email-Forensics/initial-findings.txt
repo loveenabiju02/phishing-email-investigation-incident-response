@@ -1,0 +1,17 @@
+INCIDENT: GH-2026-001
+ORGANISATION: Gulf Horizon Travel LLC
+EMAIL SUBJECT: URGENT: Account Verification Required
+
+INITIAL FINDINGS
+
+1. Sender impersonates Microsoft 365 Support.
+2. From and Reply-To addresses use different domains.
+3. SPF authentication: FAIL (simulated).
+4. DKIM authentication: NONE (simulated).
+5. DMARC authentication: FAIL (simulated).
+6. Message uses urgency and account-suspension threats.
+7. Suspicious URL identified and extracted.
+8. Sender IP and domain recorded as IOCs.
+
+STATUS: Initial analysis completed.
+NOTE: All evidence is synthetic and created for training.

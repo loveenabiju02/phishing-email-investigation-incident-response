@@ -1,0 +1,37 @@
+# Evidence Register
+## Incident ID: GH-2026-001
+## Organisation: Gulf Horizon Travel LLC
+
+| Evidence ID | Evidence Item | File Location | Purpose |
+|---|---|---|---|
+| EV-001 | Synthetic phishing email | 01-Email-Samples/phishing-sample.eml | Original email sample for investigation |
+| EV-002 | SHA-256 file integrity record | 08-Evidence/file-integrity.txt | Documents the email's calculated hash |
+| EV-003 | Initial forensic findings | 02-Email-Forensics/initial-findings.txt | Summarises suspicious email characteristics |
+| EV-004 | Header analysis | 02-Email-Forensics/header-analysis.txt | Documents sender, reply-to and routing details |
+| EV-005 | HTML analysis | 02-Email-Forensics/html-analysis.txt | Records suspicious content and hyperlink behaviour |
+| EV-006 | IOC register | 03-Threat-Intelligence/iocs.txt | Lists extracted indicators |
+| EV-007 | External intelligence research | 03-Threat-Intelligence/external-intelligence.txt | Records external campaign research |
+| EV-008 | Campaign comparison | 03-Threat-Intelligence/campaign-comparison.txt | Compares external research with the scenario |
+| EV-009 | MITRE ATT&CK mapping | 06-MITRE-ATTACK/technique-mapping.txt | Maps observed and potential techniques |
+| EV-010 | Python analysis script | 04-Python-Automation/phishing_analyzer.py | Automates email parsing and IOC extraction |
+| EV-011 | Automated analysis output | 04-Python-Automation/automated-analysis.json | Stores extracted email details and URLs |
+| EV-012 | Simulated web activity | 08-Evidence/simulated-web-activity.csv | Provides activity events for SIEM analysis |
+| EV-013 | Interaction simulation | 07-Incident-Response/interaction-simulation.txt | Documents assumed employee interaction |
+| EV-014 | Incident response plan | 07-Incident-Response/incident-response-plan.txt | Documents recommended response actions |
+| EV-015 | Incident timeline | 07-Incident-Response/incident-timeline.txt | Records simulated events and investigation milestones |
+| EV-016 | Splunk dashboard | Screenshot: phishing-incident-dashboard-complete.png | Demonstrates SIEM monitoring panels |
+| EV-017 | Splunk alert configuration | Screenshot: phishing-alert-configuration.png | Demonstrates saved alert configuration |
+| EV-018 | Python execution evidence | Screenshot: python-automation-success.png | Demonstrates successful script execution |
+
+## Evidence Handling Notes
+
+- The original email sample is synthetic and should remain unchanged.
+- The recorded SHA-256 hash can be used to verify file integrity.
+- All simulated activity records must be identified as training data.
+- External threat-intelligence findings are contextual research, not proof of attribution.
+- Screenshots should be retained in the evidence folder.
+- Evidence should be preserved and clearly identified throughout the investigation.
+
+## Limitations
+
+This project uses synthetic email and activity data. The evidence register does not imply that real corporate systems or accounts were accessed or compromised.
