@@ -77,7 +77,8 @@ External research was used for contextual understanding and does not establish a
 
 ### Phase 4 – Python Automation
 
-Developed a Python script to automate the analysis of the synthetic phishing email.  ![Python Automation Execution](08-Evidence/python-automation-success.png)
+Developed a Python script to automate the analysis of the synthetic phishing email. 
+![Python Automation Execution](08-Evidence/python-automation-success.png)
 
 The script:
 - Parses email headers.
@@ -98,7 +99,7 @@ The mapping distinguishes the phishing link observed in the synthetic email from
 
 ### Phase 6 – SIEM Detection Using Splunk
 
-Imported a synthetic web activity CSV dataset into Splunk Cloud to demonstrate phishing-related event monitoring.  ![Splunk Detection Results](08-Evidence/splunk-detection-results.png)
+Imported a synthetic web activity CSV dataset into Splunk Cloud to demonstrate phishing-related event monitoring.  
 
 Developed SPL queries to:
 
@@ -117,7 +118,8 @@ The alert was configured with a high severity and a trigger condition based on m
 
 Created a Splunk dashboard titled:
 
-GH-2026-001 – Phishing Incident Monitoring ![Splunk Alert Configuration](08-Evidence/phishing-alert-configuration.png)
+GH-2026-001 – Phishing Incident Monitoring 
+![Splunk Alert Configuration](08-Evidence/phishing-alert-configuration.png)
 
 The dashboard contains five panels:
 
