@@ -246,7 +246,4 @@ Areas of Interest:
 - Threat Intelligence.
 - Incident Response.
 - Vulnerability Assessment and Security Analysis.
-=======
-# phishing-email-investigation-incident-response
-End-to-end phishing email investigation and incident response simulation using Python, Splunk, threat intelligence and MITRE ATT&amp;CK.
->>>>>>> 0c531d841ebdd5d6d213fba13cab40c75f233c80
+
