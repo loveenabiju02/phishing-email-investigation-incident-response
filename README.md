@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Phishing Email Investigation and Incident Response
 
 ![Python](https://img.shields.io/badge/Python-Automation-yellow)
